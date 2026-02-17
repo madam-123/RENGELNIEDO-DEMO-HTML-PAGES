@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Portfolio</title>
+
+<link href ="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" /> 
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background - Purple Gradient */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a0dad, #8a2be2, #9b30ff); /* Purple shades */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  margin-top: 80px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeDown 1s forwards;
+}
+
+header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #d8b4fe, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  margin-top: 10px;
+  color: #e0c3fc;
+  font-size: 16px;
+}
+
+/* Navigation */
+nav {
+  margin-top: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 20px;
+  color: #fbb6ce;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* Cards - Dark Purple with Shadow */
+.card {
+  margin-top: 60px;
+  width: 80%;
+  max-width: 900px;
+  background: rgba(75, 0, 130, 0.8); /* Dark purple */
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(138, 43, 226, 0.8), 0 15px 50px rgba(138, 43, 226, 0.4);
+  border: 1px solid rgba(138, 43, 226, 0.5);
+  text-align: left; /* content left-aligned */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #f0c6ff;
+}
+
+.card p {
+  color: #ffe6fd;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+/* Skills Bars */
+.skill-bar {
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: rgba(75, 0, 130, 0.8); /* Dark purple footer */
+  border-radius: 10px;
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+  color: #f0e6ff;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards 0.5s;
+  box-shadow: 0 8px 25px rgba(138, 43, 226, 0.8), 0 15px 50px rgba(138, 43, 226, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    padding: 25px;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  footer {
+    width: 90%;
+  }
+}
+
+/* Animations */
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>RENGEL A. NIEDO</h1>
+  <p>BSIT Student in Madridejos Community College</p>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- About Me -->
+<div id="about" class="card">
+  <h2>About Me</h2>
+  <p>
+   Hello, I am Rengel. I am a passionate BSIT student at Madridejos Community College 
+   who enjoys building modern systems and web applications.
+   I love creating clean, user-friendly interfaces that provide seamless experiences. 
+   I am always eager to learn new technologies and improve my skills.
+   My goal is to transform creative ideas into functional digital solutions that make a real impact.
+  </p>
+</div>
+
+<!-- Skills Section -->
+<div id="skills" class="card">
+  <h2>🛠 Skills</h2>
+  <div class="skill-bar" data-width="90%">Photo Editing (Canva)</div>
+  <div class="skill-bar" data-width="85%">Microsoft Office</div>
+  <div class="skill-bar" data-width="80%">Basic HTML &amp; CSS</div>
+  <div class="skill-bar" data-width="70%">Time Management</div>
+</div>
+
+<!-- Projects Section -->
+<div id="projects" class="card">
+  <h2>📂 Projects</h2>
+  <p><strong>BSIT Class Attendance System</strong> – A system for tracking student attendance in class.</p>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="card">
+  <h2>📞 Contact Me</h2>
+  <p>Email: rengelniedo@email.com</p>
+  <p>Phone: 09929652673</p>
+  <p>Location: Madridejos, Cebu</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 RENGEL A. NIEDO | All Rights Reserved</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  // Smooth scrolling for nav links
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if(target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Animate cards on scroll
+  const cards = document.querySelectorAll('.card');
+  const skillBars = document.querySelectorAll('.skill-bar');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+
+        // Animate skill bars
+        skillBars.forEach(bar => {
+          bar.style.width = bar.getAttribute('data-width');
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
